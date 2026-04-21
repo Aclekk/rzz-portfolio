@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --blue: #00D4FF;
+  --blue: #00d4ff;
   --blue-dim: rgba(0, 212, 255, 0.15);
   --blue-glow: rgba(0, 212, 255, 0.08);
   --bg: #020812;
@@ -13,8 +13,8 @@
   --border: rgba(0, 212, 255, 0.18);
   --text: #c8e8f0;
   --muted: #4a7a8a;
-  --font-display: 'Orbitron', monospace;
-  --font-mono: 'Space Mono', monospace;
+  --font-display: "Orbitron", monospace;
+  --font-mono: "Space Mono", monospace;
 }
 
 * {
@@ -35,67 +35,194 @@ body {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 2px;
+}
 
 /* Selection */
-::selection { background: rgba(0, 212, 255, 0.25); color: #fff; }
+::selection {
+  background: rgba(0, 212, 255, 0.25);
+  color: #fff;
+}
 
 /* Clip path button style */
 .clip-btn {
   clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
 
-/* Scroll reveal base states */
+/* ─── Scroll reveal ──────────────────────────────────────────────────────── */
 .reveal-left {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-right {
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-bottom {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-zoom-in {
   opacity: 0;
   transform: scale(0.88);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-zoom-out {
   opacity: 0;
   transform: scale(1.1);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .revealed {
   opacity: 1 !important;
   transform: none !important;
 }
 
-.delay-1 { transition-delay: 0.08s !important; }
-.delay-2 { transition-delay: 0.16s !important; }
-.delay-3 { transition-delay: 0.24s !important; }
-.delay-4 { transition-delay: 0.32s !important; }
-.delay-5 { transition-delay: 0.40s !important; }
+.delay-1 {
+  transition-delay: 0.08s !important;
+}
+.delay-2 {
+  transition-delay: 0.16s !important;
+}
+.delay-3 {
+  transition-delay: 0.24s !important;
+}
+.delay-4 {
+  transition-delay: 0.32s !important;
+}
+.delay-5 {
+  transition-delay: 0.4s !important;
+}
 
-/* Scan line animation */
+/* ─── Keyframes ──────────────────────────────────────────────────────────── */
 @keyframes scanline {
-  0%   { left: -100%; }
-  100% { left: 200%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.2; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes glitch1 {
+  0%,
+  95%,
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+  96% {
+    transform: translateX(-2px) skewX(-1deg);
+    opacity: 0.8;
+  }
+  97% {
+    transform: translateX(2px);
+    opacity: 0.9;
+  }
+  98% {
+    transform: translateX(-1px);
+    opacity: 1;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ─── Responsive helpers ─────────────────────────────────────────────────── */
+
+/* Mobile: ≤ 640px */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .mobile-col {
+    flex-direction: column !important;
+  }
+  .mobile-full {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .mobile-center {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .mobile-px {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .mobile-pt {
+    padding-top: 5rem !important;
+  }
+}
+
+/* Tablet: 641px – 1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-col {
+    flex-direction: column !important;
+  }
+  .tablet-2col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .tablet-px {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
 }

@@ -1,14 +1,14 @@
 export const PERSONAL = {
   name: "Rachen Ziyad Zechran",
   initials: "RZZ",
-  tagline: "Cyber Enthusiast & Web Developer",
+  tagline: "Software Engineer ",
   eyebrow: "// Informatics · UMN · Tangerang",
   status: "OPEN TO WORK · SOFTWARE ENGINEER INTERN",
   bio: `Informatics student at Universitas Multimedia Nusantara with a focus on building scalable web applications and secure systems. I work across the full frontend stack — TypeScript, React, Tailwind CSS, and Next.js — with a growing foundation in network security and Linux operations.`,
   bio2: `Currently gaining hands-on experience as a Software Engineer Intern, developing a full-scale IT service platform from the ground up, including AI chatbot integration and multi-service infrastructure.`,
   linkedin: "https://www.linkedin.com/in/rachen-ziyad-zechran-118352279",
   github: "https://github.com/Aclekk",
-  email: "rachen@email.com", // ganti dengan email asli kamu
+  email: "ziyadzechran@email.com", // ganti dengan email asli kamu
 };
 
 export const TRAITS = [
@@ -33,16 +33,22 @@ export const TRAITS = [
 export const SKILLS = [
   { name: "HTML / CSS / Tailwind", pct: 90 },
   { name: "JavaScript / TypeScript", pct: 80 },
-  { name: "React.js", pct: 85 },
-  { name: "Next.js", pct: 82 },
-  { name: "PHP / Laravel", pct: 80 },
+  { name: "React.js", pct: 95 },
+  { name: "Next.js", pct: 90 },
+  { name: "Flutter", pct: 80 },
+  { name: "Blender 3D", pct: 75 },
+  { name: "Angular", pct: 80 },
+  { name: "PHP / Laravel", pct: 85 },
   { name: "Python", pct: 75 },
   { name: "Kotlin (Android)", pct: 80 },
   { name: "Git & GitHub", pct: 85 },
   { name: "API Integration", pct: 75 },
   { name: "Kali Linux / CyberSec", pct: 80 },
   { name: "C#", pct: 75 },
-  { name: "MySQL", pct: 78 },
+  { name: "MySQL", pct: 80 },
+  { name: "Node.js", pct: 80 },
+  { name: "Laravel,PHP", pct: 90 },
+  { name: "Firebase", pct: 80 },
 ];
 
 export const PROJECTS = [
